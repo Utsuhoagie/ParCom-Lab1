@@ -67,8 +67,8 @@ int main(int argc, char** argv) {
     #pragma omp parallel for private(i,j,k) shared(A,B,C)
     {
         for (i = 0; i < n; i++) {
-            for (j = 0; j < n; j++) {
-                for (k = 0; k < n; k++) {
+            for (k = 0; k < n; k++) {
+                for (j = 0; j < n; j++) {
                     C[i*n + j] += A[i*n + k] * B[k*n + j];
                 }
             }
